@@ -41,9 +41,9 @@ export const GlobalProvider = ({ children }: GlobalProviderProps) => {
 
   const isLogged = !!user;
 
-  if (process.env.NODE_ENV === 'development') {
-    console.log(JSON.stringify(user, null, 2));
-  }
+  // if (process.env.NODE_ENV === 'development') {
+  //   console.log(JSON.stringify(user, null, 2));
+  // }
 
   const refetch = useCallback(() => {
     refetchUser({});
