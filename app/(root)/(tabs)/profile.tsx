@@ -1,6 +1,5 @@
 import { settings } from '@/constants/data';
 import icons from '@/constants/icons';
-import images from '@/constants/images';
 import { logout } from '@/lib/appwrite';
 import { useGlobalContext } from '@/lib/global-provider';
 import React from 'react';
@@ -60,7 +59,11 @@ const handleLogout = async() => {
 
         <View className='flex-row justify-center flex mt-5'>
             <View className='flex flex-col items-center relative mt-5'>
-                <Image source={images.avatar} className='size-50 relative rounded-full'/>
+                <Image source={{uri:user?.avatar}} 
+                style={{ width: 100, height: 100, borderRadius: 50, backgroundColor: 'gray' }} 
+                // className='size-50 relative rounded-full'
+                
+                />
 
                 
                 <Text className='text-2xl font-rubik-bold mt-3'>{user?.name}</Text>
