@@ -13,6 +13,7 @@ export default function Index() {
   return (
     <SafeAreaView className="bg-white h-full">
       
+      
 
               <FlatList 
               data={[1,2,3,4,5]}
@@ -28,7 +29,7 @@ export default function Index() {
                   <View className="flex flex-row items-center">
                     <Image  source={{uri:user?.avatar}} className="size-12 rounded-full"/>
                     <View className="flex flex-col items-start ml-2 justify-center">
-                      <Text className="text-xs font-rubik text-black-100">Good Morning !</Text>
+                      <Text className="text-xs font-rubik text-black-100">Welcome !</Text>
                       <Text className="text-base font-rubik-medium text-ba">{user?.name}</Text>
                     </View>
                     </View> 
@@ -47,7 +48,7 @@ export default function Index() {
                     </TouchableOpacity>
                     </View>
                   <FlatList
-                   data={[1,2,3,]}
+                   data={[6,7,8,9]}
                   renderItem={({item})=><FeaturedCard/>}
                   horizontal
                   keyExtractor={(item)=>item.toString()}
